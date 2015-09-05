@@ -16,4 +16,4 @@ COPY package.json /src/
 RUN cd /src
 
 EXPOSE 3000
-CMD ["nodejs", "/src/bin/www"]
+CMD ["nodejs", "./bin/www"]
