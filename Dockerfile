@@ -5,15 +5,15 @@ FROM node:0.12.7-onbuild
 #RUN apt-get -y install npm
 
 #COPY . /src
-COPY bin /src
-COPY public /src
-COPY routes /src
-COPY views /src
-COPY app.js /src/
-COPY package.json /src/
+#COPY bin /src
+#COPY public /src
+#COPY routes /src
+#COPY views /src
+#COPY app.js /src/
+#COPY package.json /src/
 
-#RUN cd /src; npm install
-RUN cd /src
+RUN npm install
+#RUN cd /src
 
 EXPOSE 3000
-CMD ["nodejs", "./bin/www"]
+CMD ["node", "bin/www"]
